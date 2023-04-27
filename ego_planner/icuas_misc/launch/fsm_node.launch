@@ -1,0 +1,56 @@
+<launch>
+    <node name="a_fsm_node" pkg="icuas_misc" type="a_fsm_node" output="screen">
+
+        <remap from = "/grid_map/odom"   to = "/red/odometry"/> 
+        <remap from = "/grid_map/depth" to = "/red/camera/depth/image_raw"/>
+
+        <param name="fov_x"      value="79.99980510293632" />
+        <param name="fov_y"      value="64.36626534732653" />  
+
+        <param name="grid_map/resolution"      value="0.28 " /> 
+        <param name="grid_map/map_size_x"   value="160.0" /> 
+        <param name="grid_map/map_size_y"   value="160.0" /> 
+        <param name="grid_map/map_size_z"   value="160.0" /> 
+        <param name="grid_map/local_update_range_x"  value="40.5" /> 
+        <param name="grid_map/local_update_range_y"  value="40.5" /> 
+        <param name="grid_map/local_update_range_z"  value="20.5" /> 
+        <param name="grid_map/obstacles_inflation"     value="0.00" /> 
+        <param name="grid_map/local_map_margin" value="40"/>
+        <param name="grid_map/ground_height"        value="-0.01"/>
+        <!-- camera parameter -->
+        
+        <param name="grid_map/fx" value="381.36246688113556"/>
+        <param name="grid_map/fy" value="381.36246688113556"/>
+        <param name="grid_map/cx" value="320.5"/>
+        <param name="grid_map/cy" value="240.5"/>
+        <!-- depth filter -->
+        
+        <param name="grid_map/use_depth_filter" value="true"/>
+        <param name="grid_map/depth_filter_tolerance" value="0.15"/>
+        <param name="grid_map/depth_filter_maxdist"   value="15.0"/>
+        <param name="grid_map/depth_filter_mindist"   value="0.4"/>
+        <param name="grid_map/depth_filter_margin"    value="1"/>
+        <param name="grid_map/k_depth_scaling_factor" value="1000.0"/>
+        <param name="grid_map/skip_pixel" value="2"/>
+        <!-- local fusion -->
+        <param name="grid_map/p_hit"  value="0.65"/>
+        <param name="grid_map/p_miss" value="0.35"/>
+        <param name="grid_map/p_min"  value="0.12"/>
+        <param name="grid_map/p_max"  value="0.90"/>
+        <param name="grid_map/p_occ"  value="0.80"/>
+        <param name="grid_map/min_ray_length" value="0.4"/>
+        <param name="grid_map/max_ray_length" value="25.0"/>
+
+        <param name="grid_map/virtual_ceil_height"   value="80.0"/>
+        <param name="grid_map/visualization_truncate_height"   value="80.0"/>
+        <param name="grid_map/show_occ_time"  value="false"/>
+        <param name="grid_map/pose_type"     value="2"/>  
+        <param name="grid_map/frame_id"      value="world"/>
+
+        <param name="grid_map/namespace"      value="fsm"/>        
+
+
+            
+    </node>    
+
+</launch>

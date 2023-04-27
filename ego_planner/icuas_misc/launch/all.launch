@@ -1,0 +1,6 @@
+<launch> 
+    <include  file="$(find ego_planner)/launch/icuas.launch" /> 
+    <include  file="$(find icuas_misc)/launch/fsm_node.launch" />
+    <node pkg="icuas_misc" name="tsp" type="tsp.py" output="screen"/>
+
+</launch>

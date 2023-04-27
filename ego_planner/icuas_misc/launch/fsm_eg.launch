@@ -1,0 +1,13 @@
+<launch>
+    <node name="a_fsm_eg" pkg="icuas_misc" type="a_fsm_eg" output="screen">
+            <param name="fsm_x" type="double" value="12.360"/>
+            <param name="fsm_y" type="double" value="26.2"/>
+            <param name="fsm_z" type="double" value="5.0"/>
+    </node>    
+
+</launch>
+
+<!-- 
+10.36
+46.2
+5.0 -->
